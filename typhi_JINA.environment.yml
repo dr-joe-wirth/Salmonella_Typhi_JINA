@@ -1,0 +1,7 @@
+name: typhi_JINA
+channels:
+- conda-forge
+- bioconda
+dependencies:
+- bindash=1.0
+- jellyfish=2.2.6
