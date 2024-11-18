@@ -16,10 +16,6 @@ OUT_DIR=$3
 THREADS=$4
 BLOCK_SIZE=$5
 
-# Activate enviroments
-source "$(dirname "${CONDA_EXE%/*}")"/etc/profile.d/conda.sh
-conda activate typhi_JINA
-
 # Constants
 KMERLEN_jellyfish=31
 JF_COUNTS='mer_counts.jf'
