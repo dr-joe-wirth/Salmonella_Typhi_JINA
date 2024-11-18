@@ -28,11 +28,18 @@ conda env create -n typhi_JINA -f typhi_JINA.environment.yml
 ### Verify installation
 Extract the test sequences and run the pipeline. The pipeline uses 16 threads and computes the JI distances in batches of 32 genomes. The parameters needed are:
 
+#### download test sequences
 ~~~bash
 wget -O test_seqs/test_seqs.tar.xz https://castillo.dicom.unican.es/zaguan/Salmonella_Typhi_JINA/test_seqs.tar.xz
 tar -Jxf test_seqs/test_seqs.tar.xz -C test_seqs/
+~~~
+
+#### run pipeline
+~~~bash
+conda activate typhi_JINA
 ./typhi_JINA_pipeline.sh test_seqs/genome_list.txt test_seqs test_out 16 32
 ~~~
+
 Explanation of parameters:
 - test_seqs/genome_list.txt: Path to the file containing the list of genomes to process.
 - test_seqs: Directory where the test sequences are stored.
